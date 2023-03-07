@@ -13,7 +13,7 @@
   <body>
     {% extends "base.html" %}{% set active_page = "contact_us" %} {% block
     navigation %} {{ super() }}
-    <div class="title">Contact Us!</div>
+    <div class="title">Leave a message</div>
     <form method="post" action="" enctype="multipart/form-data">
       {{ form.csrf_token }}
       <div>
@@ -42,21 +42,29 @@
       </div>
       {{ form.submit }}
     </form>
+    <br />
+    <div class="title">Messages</div>
 
     {% for i in data %}
-    <div>
-      <img
-        src="{{ url_for('static', filename='images/' + i.image) }}"
-        alt="#"
-        height="100px"
-        width="100px"
-        enctype="multipart/form-data"
-      />
-      {{ i.id }}. {{i.name}}, {{i.date}}
+    <div class="contact-box">
+      <div>
+        <img
+          src="{{ url_for('static', filename='images/' + i.image) }}"
+          alt="#"
+          height="100px"
+          width="100px"
+          enctype="multipart/form-data"
+        />
+      </div>
+      <div class="contact-message-box">
+        <div>{{ i.id }}. {{i.name}}, {{i.date}}</div>
+
+        <div>Your message:</div>
+        <div>{{i.message}}</div>
+      </div>
     </div>
-    <div>Your message:</div>
-    <div>{{i.message}}</div>
     <br />
+
     {% endfor %} {% endblock %}
   </body>
 </html>
