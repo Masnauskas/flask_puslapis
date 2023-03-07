@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+  </head>
+  <body>
+    {% extends "base.html" %} {% block navigation %} {{ super() }}
+    <div class="title">Thank you for your message!</div>
+    <div class="contact-success-box">Name: <u>{{form.name.data}}</u></div>
+    <div class="contact-success-box">Email: <u>{{form.email.data}}</u></div>
+    <div class="contact-success-box">Your message:</div>
+    <div class="message-box">
+      <div>{{form.body.data}}</div>
+    </div>
+    {% endblock %}
+  </body>
+</html>

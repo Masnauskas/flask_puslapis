@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+}
+/* body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+} */
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.main_container {
+  padding: 50px;
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+  text-align: center;
+}
+/* Title and subtitle */
+.title {
+  font-size: 24px;
+  font-weight: bolder;
+  text-align: center;
+}
+.subtitle {
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 10px;
+}
+/*End of Title and subtitle */
+/* Navigation */
+.nav_box {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.nav_box a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.nav_box a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.nav_box_index {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav_box_index a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.nav_box_index a:hover {
+  text-decoration: underline;
+}
+
+/* End of navigation */
+.info_text_formatting {
+  text-align: left;
+}
+
+.ul_container {
+  text-align: center;
+}
+
+ul {
+  display: inline-block;
+  text-align: left;
+}
+.img_position {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.pillars_img {
+  width: 200px;
+  height: 200px;
+}
+.index_img {
+  width: 100px;
+  height: 129px;
+  float: left;
+  margin-right: 10px;
+}
+
+/* Table */
+table {
+  display: flex;
+  justify-content: center;
+  border-collapse: collapse;
+}
+
+table tr th {
+  padding: 10px;
+}
+
+table tr td {
+  padding: 10px;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+/* End Table */
+
+/* Form */
+
+input,
+textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 5px 5px 0;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  background-color: black;
+  color: white;
+  width: 30%;
+  cursor: pointer;
+  position: relative;
+}
+input[type="submit"]:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+/* End Form */
+
+.contact-success-box {
+  padding: 5px 5px 5px 0;
+}
+.message-box {
+  border: 1px solid black;
+  padding: 10px 5px;
+}
+
+/* Hubble cards */
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

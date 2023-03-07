@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+  </head>
+  <body>
+    {% extends "base.html" %}{% set active_page = "contact_us" %} {% block
+    navigation %} {{ super() }}
+    <div class="title">Contact Us!</div>
+    <form method="post" action="" enctype="multipart/form-data">
+      {{ form.csrf_token }}
+      <div>
+        {{ form.name.label}} {{ form.name(class="form-input")}} {% if
+        form.name.errors %} {% for error in form.name.errors %}
+        <div style="color: red">{{ error }}</div>
+        {% endfor %} {% endif %}
+      </div>
+      <div>
+        {{ form.email.label }} {{ form.email(class="form-input") }} {% if
+        form.email.errors %} {% for error in form.email.errors %}
+        <div style="color: red">{{ error }}</div>
+        {% endfor %} {% endif %}
+      </div>
+      <div>
+        {{ form.image.label}} {{ form.image(class="form-input")}} {% if
+        form.image.errors %} {% for error in form.image.errors %}
+        <div style="color: red">{{ error }}</div>
+        {% endfor %} {% endif %}
+      </div>
+      <div>
+        {{ form.body.label}} {{ form.body(class="form-input", rows="5") }} {% if
+        form.body.errors %} {% for error in form.body.errors %}
+        <div style="color: red">{{ error }}</div>
+        {% endfor %} {% endif %}
+      </div>
+      {{ form.submit }}
+    </form>
+
+    {% for i in data %}
+    <div>
+      <img
+        src="{{ url_for('static', filename='images/' + i.image) }}"
+        alt="#"
+        height="100px"
+        width="100px"
+        enctype="multipart/form-data"
+      />
+      {{ i.id }}. {{i.name}}, {{i.date}}
+    </div>
+    <div>{{i.message}}</div>
+    <br />
+    {% endfor %} {% endblock %}
+  </body>
+</html>

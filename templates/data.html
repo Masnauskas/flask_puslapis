@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+  </head>
+  <body>
+    {% extends "base.html" %}{% set active_page = "data" %} {% block navigation
+    %} {{ super() }}
+    <div class="title">Planet discovery</div>
+    <div class="info_text_formatting">
+      The list of exoplanets detected by the Kepler space telescope contains
+      bodies with a wide variety of properties, with significant ranges in
+      orbital distances, masses, radii, composition, habitability, and host star
+      type. As of 2018, the Kepler space telescope and its follow-up
+      observations have detected 2,398 confirmed planets, including hot
+      Jupiters, super-Earths, circumbinary planets, and planets located in the
+      circumstellar habitable zones of their host stars. In addition, Kepler has
+      detected over 3,601 unconfirmed planet candidates and 2,165 eclipsing
+      binary stars.
+    </div>
+    <br />
+    <div class="title">
+      Some of the potentially habitable planets discovered by Kepler space
+      telescope
+    </div>
+    <br />
+    <table>
+      <tr>
+        <th>Planet</th>
+        <th>Discovery method</th>
+        <th>Radius (Earth = 1)</th>
+        <th>Orbital period (days)</th>
+      </tr>
+      <tr>
+        <td>Kepler-22b</td>
+        <td>Transit</td>
+        <td>2.4</td>
+        <td>289</td>
+      </tr>
+      <tr>
+        <td>Kepler-26e</td>
+        <td>Transit</td>
+        <td>2.1</td>
+        <td>46</td>
+      </tr>
+      <tr>
+        <td>Kepler-62e</td>
+        <td>Transit</td>
+        <td>1.61</td>
+        <td>122</td>
+      </tr>
+      <tr>
+        <td>Kepler-62f1</td>
+        <td>Transit</td>
+        <td>1.41</td>
+        <td>267</td>
+      </tr>
+      <tr>
+        <td>Kepler-174d</td>
+        <td>Transit</td>
+        <td>2.19</td>
+        <td>247</td>
+      </tr>
+      <tr>
+        <td>Kepler-186f</td>
+        <td>Transit</td>
+        <td>1.17</td>
+        <td>129</td>
+      </tr>
+      <tr>
+        <td>Kepler-296e</td>
+        <td>Transit</td>
+        <td>1.750</td>
+        <td>34</td>
+      </tr>
+      <tr>
+        <td>Kepler-296f</td>
+        <td>Transit</td>
+        <td>1.790</td>
+        <td>63</td>
+      </tr>
+      <tr>
+        <td>Kepler-298df</td>
+        <td>Transit</td>
+        <td>2.50</td>
+        <td>77</td>
+      </tr>
+    </table>
+
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+  </head>
+  <body>
+    {% extends "base.html" %}{% set active_page = "index" %} {% block navigation
+    %} {{ super() }}
+
+    <div class="title">Space Telescopes and the search for Exoplanets</div>
+    <div>
+      In this small website you will find information about the search for
+      Exoplanets, what exoplanets are, methods used to find exoplanets and Space
+      Telescopes. Follow the links below or above to access all of the
+      information.
+    </div>
+    <br />
+    <nav class="nav_box_index">
+      <a href="{{url_for('exoplanets')}}"
+        >Exoplanets - information about exoplanets</a
+      >
+      <a href="{{url_for('telescopes')}}"
+        >Telescopes - information about space telescopes</a
+      >
+      <a href="{{url_for('methods')}}"
+        >Methods - methods used to find exoplanets</a
+      >
+
+      <a href="{{url_for('info')}}">Info</a>
+      <a href="{{url_for('data')}}">Data</a>
+    </nav>
+    {% endblock %}
+  </body>
+</html>

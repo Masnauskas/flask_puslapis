@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+  </head>
+  <body>
+    {% extends "base.html" %}{% set active_page = "exoplanets" %} {% block
+    navigation %} {{ super() }}
+    <div class="title">The search for Exoplanets</div>
+    <br />
+    <div>
+      An exoplanet, or extrasolar planet, is a planet outside of our solar
+      system that usually orbits another star in our galaxy.
+    </div>
+    <br />
+    <iframe
+      width="653"
+      height="367"
+      src="https://www.youtube.com/embed/0ZOhJe_7GrE"
+      class="video"
+    >
+    </iframe>
+    <br />
+    <div>
+      Most of the exoplanets discovered so far are in a relatively small region
+      of our galaxy, the Milky Way. ("Small" meaning within thousands of
+      light-years of our solar system; one light-year equals 5.88 trillion
+      miles, or 9.46 trillion kilometers.) That is as far as current telescopes
+      have been able to probe. We know from NASA’s Kepler Space Telescope that
+      there are more planets than stars in the galaxy.
+    </div>
+    <br />
+    <div>
+      Although exoplanets are far – even the closest known exoplanet to Earth,
+      Proxima Centauri b, is still about 4 light-years away – scientists have
+      discovered creative ways to spot these seemingly tiny objects.
+    </div>
+    <br />
+    {% endblock %}
+  </body>
+</html>

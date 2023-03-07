@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+  </head>
+  <body>
+    {% extends "base.html" %} {% set active_page = "hubble" %} {% block
+    navigation %} {{ super() }}
+    <div class="title">Hubble Space telescope</div>
+    <div class="info_text_formatting">
+      Launched in 1990, Hubble has been visited by astronauts four times in
+      order to make repairs and add new instruments. Each instrument that flies
+      on Hubble has special features that let astronomers study the heavens in
+      different ways. Hubble's unique capabilities can also be partnered with
+      other space observatories and those on the ground to enable scientists to
+      explore the universe in ways that no single mission could ever accomplish
+      alone.
+    </div>
+    <br />
+    <div class="title">Hubble Space telescope programs</div>
+    <div class="info_text_formatting">
+      Over its long service history the Hubble observatory has made many
+      discoveries. Probably the most famous one is a picture of interstellar gas
+      and dust in the Eagle Nebula, in the Serpens constellation, some
+      6,500–7,000 light-years (2,000–2,100 pc; 61–66 Em) from Earth. The
+      photograph is usually called the Pillars of Creation. Hubble took many
+      images. Some of them can be seen below.
+    </div>
+    <br />
+    <div class="card-container">
+      {% for card in hubbleCard %}
+      <div class="card">
+        <img class="pillars_img" src="{{card.image}}" alt="{{card.image}}" />
+        <div>{{card.name}}</div>
+      </div>
+
+      {%endfor%}
+    </div>
+    <br />
+    <div class="title">Hubble Space telescope programs</div>
+    <div class="info_text_formatting">
+      Since the start of the program, a number of research projects have been
+      carried out, some of them almost solely with Hubble. Although the Hubble
+      observatory is nearing the end of its life, there are still major projects
+      scheduled for it. One example is the current (2022) ULLYSES project
+      (Ultraviolet Legacy Library of Young Stars as Essential Standards) which
+      will last for three years to observe a set of high- and low-mass young
+      stars and will shed light on star formation and composition.
+    </div>
+    <br />
+    <div class="title">Introducing Hubble's ULLYSES Program</div>
+    <div class="info_text_formatting">
+      For centuries, astronomers have studied the stars, gathering information
+      about their precise positions and compositions to learn how they form. But
+      it wasn't until telescopes were launched into space that we could begin to
+      capture some of the most important information - which is delivered by
+      ultraviolet light.
+    </div>
+    <br />
+    {% endblock %}
+  </body>
+</html>

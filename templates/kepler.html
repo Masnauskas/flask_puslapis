@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+  </head>
+  <body>
+    {% extends "base.html" %}{% set active_page = "kepler" %} {% block
+    navigation %} {{ super() }}
+    <div class="title">Kepler Exoplanet Mission</div>
+    <div class="info_text_formatting">
+      Kepler was a space telescope designed to survey a portion of the Milky Way
+      galaxy in search of exoplanets, which are planets outside our solar
+      system.
+    </div>
+    <br />
+    <div class="title">Objectives and methods</div>
+    <div class="info_text_formatting">
+      The scientific objective of the Kepler space telescope was to explore the
+      structure and diversity of planetary systems. This spacecraft observes a
+      large sample of stars to achieve several key goals:
+    </div>
+    <div class="ul_container">
+      <ul>
+        <li>
+          To determine how many Earth-size and larger planets there are in or
+          near the habitable zone (often called "Goldilocks planets") of a wide
+          variety of spectral types of stars.
+        </li>
+        <li>
+          To determine the range of size and shape of the orbits of these
+          planets.
+        </li>
+        <li>
+          To estimate how many planets there are in multiple-star systems.
+        </li>
+        <li>
+          To determine the range of orbit size, brightness, size, mass and
+          density of short-period giant planets.
+        </li>
+        <li>
+          To identify additional members of each discovered planetary system
+          using other techniques.
+        </li>
+        <li>
+          Determine the properties of those stars that harbor planetary systems.
+        </li>
+      </ul>
+    </div>
+    <br />
+    <div class="title">The Transit Method</div>
+    <div class="info_text_formatting">
+      The transit method is by far the most utilized strategy in finding
+      exoplanets, and the recent launch of NASA’s Transiting Exoplanet Survey
+      Satellite (TESS) is direct result of this method’s success. The concept is
+      relatively simple: astronomers can observe the periodic dimming of a
+      star’s brightness caused by an exoplanet passing between the star and
+      Earth.
+    </div>
+    <br />
+    <img
+      class="img_position"
+      src="https://imageio.forbes.com/blogs-images/jesseshanahan/files/2018/05/656348main_ToV_transit_diag_full-1200x511.jpg?format=jpg&width=960"
+    />
+
+    {% endblock %}
+  </body>
+</html>

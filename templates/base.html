@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+  </head>
+
+  <body>
+    {% block navigation %}
+    <div class="main_container">
+      <hr />
+
+      <ul class="nav_box">
+        <li class="{{ 'active' if active_page=='index' else ''}}">
+          <a href="{{url_for('index')}}"> Home </a>
+        </li>
+        <li class="{{ 'active' if active_page=='exoplanets' else ''}}">
+          <a href="{{url_for('exoplanets')}}">Exoplanets</a>
+        </li>
+        <li class="{{ 'active' if active_page=='telescopes' else ''}}">
+          <a href="{{url_for('telescopes')}}">Telescopes</a>
+        </li>
+        <li class="{{ 'active' if active_page=='methods' else ''}}">
+          <a href="{{url_for('methods')}}">Methods</a>
+        </li>
+        <li class="{{ 'active' if active_page=='data' else ''}}">
+          <a href="{{url_for('data')}}">Data</a>
+        </li>
+        <li class="{{ 'active' if active_page=='contact_us' else ''}}">
+          <a href="{{url_for('contact_us')}}">Contact Us</a>
+        </li>
+      </ul>
+      <hr />
+      <br />
+      {% endblock %}{% block footer %}
+      <footer class="footer">
+        <br />
+        <hr />
+        <div>
+          &#169; Tadas Mašnauskas. All rights reserved. Powered by
+          Determination.
+        </div>
+      </footer>
+    </div>
+    {% endblock %}
+  </body>
+</html>

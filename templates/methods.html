@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+  </head>
+  <body>
+    {% extends "base.html" %}{% set active_page = "methods" %} {% block
+    navigation %} {{ super() }}
+    <div class="title">5 Ways to Find a Planet</div>
+    <ul>
+      <li>Radial velocity</li>
+      <li>Transit</li>
+      <li>Direct imaging</li>
+      <li>Gravitational microlensing</li>
+      <li>Astrometry</li>
+    </ul>
+    {% endblock %}
+  </body>
+</html>
